@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email-Registration Form | Submit</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the elements
+        const emailInput = document.querySelector('input[type="email"]');
+        const subscribeButton = document.querySelector(".submit");
+        const labelError = document.querySelector(".label1");
+        const successPageEmail = document.querySelector(".email");
+
+        // Event listener for the Subscribe button click
+        subscribeButton.addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent the form from submitting
+
+          // Check if the email is empty or not valid
+          if (
+            emailInput.value.trim() === "" ||
+            !isValidEmail(emailInput.value)
+          ) {
+            // Show error message and apply error styling
+            labelError.classList.remove("hidden");
+            emailInput.style.backgroundColor = "var(--lighttomato)";
+            emailInput.style.color = "var(--tomato)";
+            emailInput.style.border = "2px solid var(--tomato)";
+            emailInput.style.placeholderColor.textcontent = "var(--dark)";
+          } else {
+            // Email is valid
+            labelError.classList.add("hidden"); // Hide the error message
+
+            // Reset the styling to default
+            emailInput.style.border = "solid var(--grey) 1px";
+            emailInput.style.color = "var(--black)";
+            emailInput.style.backgroundColor = "var(--white)";
+
+            // Store the email address (you can use localStorage, cookies, or send it to a server)
+            const storedEmail = emailInput.value;
+
+            // Redirect to the success page
+            window.location.href = `success.html?email=${encodeURIComponent(
+              storedEmail
+            )}`;
+          }
+        });
+
+        // Function to validate email format
+        function isValidEmail(email) {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailRegex.test(email);
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="grid">
+        <div class="grid-left">
+          <h1>Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on</p>
+          <ul>
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a success</li>
+            <li>And much more!</li>
+
+            <form action="">
+              <label for="Email Address">Email Address</label>
+              <label class="label1 hidden" for="">Valid Email Required</label>
+              <input type="email" placeholder="email@company.com" />
+
+              <button class="submit">Subscribe to monthly newsletter</button>
+            </form>
+          </ul>
+        </div>
+        <div class="grid-right"></div>
+      </div>
+    </div>
+  </body>
+</html>
