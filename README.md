@@ -95,8 +95,5 @@ Well I got all my solutions from Chat GPT, the thing is you would neeed to know 
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/Olubabadee)
+- Twitter - [@yourusername](https://twitter.com/babaspecial1)
