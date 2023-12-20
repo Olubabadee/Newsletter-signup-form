@@ -101,7 +101,7 @@ body {
 }
 
 .grid-left li::before {
-  content: url("/assets/images/icon-list.svg");
+  content: url("assets/images/icon-list.svg");
   margin-right: 8px;
 }
 
@@ -257,7 +257,7 @@ body {
 @media (max-width: 375px) {
   .grid .grid-right {
     visibility: visible;
-    background-image: url("/assets/images/illustration-sign-up-mobile.svg");
+    background-image: url("assets/images/illustration-sign-up-mobile.svg");
     background: center center no-repeat cover;
     height: 250px;
     width: 100%;
