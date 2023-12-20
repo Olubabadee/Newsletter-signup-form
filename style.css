@@ -67,6 +67,7 @@ body {
 
 .grid .grid-right {
   background-image: url("assets/images/illustration-sign-up-desktop.svg");
+  background: url(assets/images/illustration-sign-up-desktop.svg);
   background: center center no-repeat cover;
   border-radius: 1rem;
 }
